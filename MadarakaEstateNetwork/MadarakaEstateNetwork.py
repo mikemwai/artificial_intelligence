@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 # Import the GBFS class
 from classes.gbfs import GBFSTraverser  
 
+'''# Import the BFS class
+from classes.bfs import BfsTraverser'''
+
 G = nx.Graph()
 
 # Add the nodes here
@@ -67,6 +70,15 @@ gbfs_traverser = GBFSTraverser()
 routes = gbfs_traverser.GBFS(G, "SportsComplex", "ParkingLot", heuristic)
 print(gbfs_traverser.visited)
 route_list = gbfs_traverser.visited
+
+'''#Call BFS to return set of all possible routes to the goal
+#Change this section to call whichever search algorithm that you have coded in classes (DFS,UCS,G-BFS,A*)
+route_bfs = BfsTraverser()
+
+#Define source and destination
+routes = route_bfs.BFS(G,"SportsComplex","ParkingLot") 
+print(route_bfs.visited)
+route_list = route_bfs.visited'''
 
 # Color the nodes in the route_bfs
 node_col = ['darkturquoise' if not node in route_list else 'peru' for node in G.nodes()]
