@@ -1,3 +1,4 @@
+#Greedy Best First Search Algorithm
 import heapq
 
 class GBFSTraverser:
